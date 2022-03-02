@@ -1,7 +1,7 @@
 FROM openjdk:8-jre-slim
 
 ENV ORACLE_HOME=/opt/oracle/instantclient_19_3
-COPY oracle /etc/ld.so.conf.d/
+COPY oracle.conf /etc/ld.so.conf.d/
 COPY nps-ca.pem /opt/workdir/
 COPY SSLPoke.class /
 RUN \
