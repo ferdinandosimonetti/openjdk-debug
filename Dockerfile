@@ -7,4 +7,4 @@ COPY SSLPoke.class /
 RUN \
     cd $JAVA_HOME/lib/security \
     && keytool -keystore cacerts -storepass changeit -noprompt -trustcacerts -importcert -alias "npsCA" -file /opt/workdir/nps-ca.pem
-ENTRYPOINT ["/bin/sleep", "999999"]
+ENTRYPOINT ["/bin/sh"]
